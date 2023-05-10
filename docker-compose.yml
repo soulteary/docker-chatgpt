@@ -11,7 +11,7 @@ services:
     environment:
       # service port
       APP_PORT: 8090
-      # the ChatGPT client domain
+      # the ChatGPT client domain, keep the same with chatgpt-client: `APP_HOSTNAME` option
       APP_HOSTNAME: "https://localhost:8090"
       # the ChatGPT backend upstream, or connect a sparrow dev server `"http://host.docker.internal:8091"`
       APP_UPSTREAM: "http://sparrow:8091"
@@ -27,7 +27,7 @@ services:
     environment:
       # service port
       APP_PORT: 8091
-      # the ChatGPT client domain
+      # the ChatGPT client domain, keep the same with chatgpt-client: `APP_HOSTNAME` option
       WEB_CLIENT_HOSTNAME: "https://localhost:8090"
       # response generate speed, 1x ~ 99x
       RESPONSE_SPEED: 10
@@ -47,7 +47,7 @@ services:
       ENABLE_OPENAI_ONLY_3_5: false
       # Enable OpenAI 3.5 API
       ENABLE_OPENAI_API: false
-      # OpenAI API Key
+      # OpenAI API Key, use your own key
       OPENAI_API_KEY: "sk-abcdefg"
       # Enable OpenAI API Proxy
       OPENAI_API_PROXY_ENABLE: false
