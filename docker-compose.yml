@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+
+  chatgpt-client:
+    image: soulteary/chatgpt:23.05.10
+    container_name: chat-client
+    restart: always
+    ports:
+      - 8090:8090
+    environment:
+      # service port
+      APP_PORT: 8090
+      # the ChatGPT client domain
+      APP_HOSTNAME: "https://localhost:8090"
+      # the ChatGPT backend upstream, or connect a sparrow dev server `"http://host.docker.internal:8091"`
+      APP_UPSTREAM: "http://sparrow:8091"
+      # Enable i18n
+      ENABLE_I18N: true
+
+  sparrow:
+    image: soulteary/sparrow
+    container_name: sparrow
+    restart: always
+    expose:
+      - 8091
+    environment:
+      # service port
+      APP_PORT: 8091
+      # the ChatGPT client domain
+      WEB_CLIENT_HOSTNAME: "https://localhost:8090"
+      # response generate speed, 1x ~ 99x
+      RESPONSE_SPEED: 10
+      # Enable history list
+      ENABLE_HISTORY_LIST: true
+      # Enable i18n
+      ENABLE_I18N: true
+      # Enable the data control
+      ENABLE_DATA_CONTROL: true
+      # Enable the model switch
+      ENABLE_MODEL_SWITCH: true
+      # Enable the plugin
+      ENABLE_PLUGIN: true
+      # Enable the official model
+      ENABLE_OPENAI_OFFICIAL_MODEL: true
+      # Only Enable the 3.5 model
+      ENABLE_OPENAI_ONLY_3_5: false
+      # Enable OpenAI 3.5 API
+      ENABLE_OPENAI_API: false
+      # OpenAI API Key
+      OPENAI_API_KEY: "sk-abcdefg"
+      # Enable OpenAI API Proxy
+      OPENAI_API_PROXY_ENABLE: false
+      # OpenAI API Proxy Address, eg: `"http://127.0.0.1:1234"` or ""
+      OPENAI_API_PROXY_ADDR: ""
+    logging:
+        driver: "json-file"
+        options:
+            max-size: "10m"
