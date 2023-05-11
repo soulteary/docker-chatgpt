@@ -2,6 +2,19 @@
 
 One-click local version of ChatGPT, allowing access to various data sources and non-OpenAI models.
 
+<center>
+<img src=".github/screenshots/perf.png" width="50%">
+<p>keep the same as the official ChatGPT, but it is much FASTER :)</p>
+</center>
+
+
+## Key features
+
+- Privacy is in your hands, no stats report.
+- Client is Blazing fast.
+- Allow you add any custom data source, data types.
+- Consistent with the official function interaction.
+
 ## Quick Overview
 
 1. Download the project.
@@ -23,6 +36,29 @@ docker compose up -d
 
 Open your browser, visit `http://localhost:8090`, and enjoy.
 
+## How to Upgrade
+
+**The Client will be updated along with the project to keep it consistent with the officially supported functions.**
+
+You can update the project by updating the mirror version used in this repository.
+
+```bash
+# version in the docker-compose.yml file
+docker pull soulteary/chatgpt:23.05.10
+```
+
+**Backend services will continue to complete and support new data source types.**
+
+You can download the latest version of the automatically built image by using the following command:
+
+```bash
+docker pull soulteary/sparrow
+# or use the latest version
+docker pull soulteary/sparrow:v0.6.0
+```
+
+Welcome to submit your code in the project to support your data type.
+
 ## Customize
 
 As an early version, you can directly use it to access the OpenAI API and get the same front-end experience as the official one.
@@ -32,6 +68,13 @@ In configuration file [docker-compose.yml](./docker-compose.yml), you can find c
 
 For more advanced usage, and previous practices, such as searching various vertical websites through it, using MidJoruney to draw pictures, you can refer to the video in the [sparrow project documentation](https://github.com/soulteary/sparrow).
 
+## About Private
+
+The project **does not need** to connect to **any external network** except for the backend service address that will be connected in the configuration.
+
+You can prohibit the privacy leakage you are worried about by setting firewall rules or cloud server export access rules.
+
+This does not affect the use of the program as it does not require an additional network connection.
 
 ## Screenshots
 
