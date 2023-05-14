@@ -33,7 +33,7 @@ App Settings.
 
 ## Quick Overview
 
-1. Download the project.
+1. Download the project, or select the appropriate example configuration file to get started.  ( eg: [examples/01.use-OpenAI-API/docker-compose.yml](examples/01.use-OpenAI-API/docker-compose.yml) )
 
 ```bash
 # download the latest version
@@ -42,7 +42,16 @@ git clone https://github.com/soulteary/docker-chatgpt.git
 wget https://github.com/soulteary/docker-chatgpt/archive/refs/heads/main.zip
 ```
 
-2. Use docker to launch the project.
+2. Update the configuration file according to your actual situation.
+
+```yaml
+OPENAI_API_KEY: "sk-......"
+# If your network is not directly accessible OpenAI API, enable proxy and set you own proxy server addr.
+# OPENAI_API_PROXY_ENABLE: "on"
+# OPENAI_API_PROXY_ADDR: "http://127.0.0.1:1234"
+```
+
+3. Use docker to launch the project.
 
 ```bash
 docker compose up
