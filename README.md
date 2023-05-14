@@ -33,7 +33,7 @@ App Settings.
 
 ## Quick Overview
 
-1. Download the project, or select the appropriate example configuration file to get started.  ( eg: [examples/01.use-OpenAI-API/docker-compose.yml](examples/01.use-OpenAI-API/docker-compose.yml) )
+1. Download the project, or select the [appropriate example](./examples/) configuration file to get started.  ( eg: [examples/01.use-OpenAI-API/docker-compose.yml](examples/01.use-OpenAI-API/docker-compose.yml) )
 
 ```bash
 # download the latest version
