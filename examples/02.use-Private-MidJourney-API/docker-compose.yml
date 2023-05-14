@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+
+  chatgpt-client:
+    image: soulteary/chatgpt
+    restart: always
+    ports:
+      - 8090:8090
+    environment:
+      # service port
+      APP_PORT: 8090
+      # the ChatGPT client domain, keep the same with chatgpt-client: `APP_HOSTNAME` option
+      APP_HOSTNAME: "http://localhost:8090"
+      # the ChatGPT backend upstream, or connect a sparrow dev server `"http://host.docker.internal:8091"`
+      APP_UPSTREAM: "http://sparrow:8091"
+
+  sparrow:
+    image: soulteary/sparrow
+    restart: always
+    environment:
+      # [Basic Settings]
+      # => The ChatGPT Web Client Domain
+      WEB_CLIENT_HOSTNAME: "http://localhost:8090"
+      # => Service port, default: 8091
+      # APP_PORT: 8091
+
+      # [Private Midjourney Server Settings] *optional
+      # => Enable Midjourney
+      ENABLE_MIDJOURNEY: "on"
+      # => Enable Midjourney Only
+      # ENABLE_MIDJOURNEY_ONLY: "on"
+      # => Midjourney API Key
+      MIDJOURNEY_API_SECRET: "your-secret"
+      # => Midjourney API Address, eg: `"ws://...."`, or `"ws://host.docker.internal:8092/ws"`
+      MIDJOURNEY_API_URL: "ws://localhost:8092/ws"
+
+    logging:
+        driver: "json-file"
+        options:
+            max-size: "10m"
