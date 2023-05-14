@@ -14,12 +14,9 @@ services:
       APP_HOSTNAME: "http://localhost:8090"
       # the ChatGPT backend upstream, or connect a sparrow dev server `"http://host.docker.internal:8091"`
       APP_UPSTREAM: "http://sparrow:8091"
-      # Enable i18n
-      ENABLE_I18N: "off"
 
   sparrow:
     image: soulteary/sparrow
-    # container_name: sparrow
     restart: always
     environment:
       # [Basic Settings]
