@@ -95,10 +95,10 @@ Welcome to submit your code in the project to support your data type.
 
 As an early version, you can directly use it to access the OpenAI API and get the same front-end experience as the official one.
 
-In configuration file [docker-compose.yml](./docker-compose.yml), you can find configuration information suitable for you.
+In configuration file `docker-compose.yml`, you can find configuration information suitable for you.
 
 
-For more advanced usage, and previous practices, such as searching various vertical websites through it, using MidJoruney to draw pictures, you can refer to the video in the [sparrow project documentation](https://github.com/soulteary/sparrow).
+For more advanced usage, and previous practices, such as searching various vertical websites through it, using MidJoruney to draw pictures, you can refer to the video in the [Sparrow project](https://github.com/soulteary/sparrow) documentation.
 
 ## Performance
 
