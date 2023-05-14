@@ -15,17 +15,12 @@ One-click local version of ChatGPT, allowing access to various data sources and 
 
 Check the [example directory](./examples/), choose the right configuration and use.
 
-```bash
-├── LICENSE
-├── README.md
-└── examples
-    ├── 01.use-OpenAI-API
-    ├── 02.use-Private-MidJourney-API
-    ├── 03.use-FlagStudio-API
-    ├── 04.use-Newlook-UI
-    ├── 05.use-custom-model-list
-    └── 06.use-plugin
-```
+- [01.use-OpenAI-API](./examples/01.use-OpenAI-API/)
+- [02.use-Private-MidJourney-API](./examples/02.use-Private-MidJourney-API/)
+- [03.use-FlagStudio-API](./examples/03.use-FlagStudio-API/)
+- [04.use-Newlook-UI](./examples/04.use-Newlook-UI/)
+- [05.use-custom-model-list](./examples/05.use-custom-model-list/)
+- [06.use-plugin](./examples/06.use-plugin/)
 
 ## Screenshots
 
