@@ -2,25 +2,7 @@
 
 One-click local version of ChatGPT, allowing access to various data sources and non-OpenAI models.
 
-## Screenshots
 
-<img src=".github/screenshots/let-coding.png" width="80%">
-
-Conversation with the image.
-
-<img src=".github/screenshots/conversation-with-image.png" width="80%">
-
-Conversation with the plugin.
-
-<img src=".github/screenshots/conversation-with-plugin.png" width="80%">
-
-Customize the Model Switcher.
-
-<img src=".github/screenshots/model-switcher.png" width="80%">
-
-App Settings.
-
-<img src=".github/screenshots/settings.png" width="80%">
 
 ## Key features
 
@@ -29,7 +11,37 @@ App Settings.
 - Allow you add any custom data source, data types.
 - Consistent with the official function interaction.
 
-<img src=".github/screenshots/perf.png" width="50%">
+## Usage Example
+
+Check the [example directory](./examples/), choose the right configuration and use.
+
+```bash
+├── LICENSE
+├── README.md
+└── examples
+    ├── 01.use-OpenAI-API
+    ├── 02.use-Private-MidJourney-API
+    ├── 03.use-FlagStudio-API
+    ├── 04.use-Newlook-UI
+    ├── 05.use-custom-model-list
+    └── 06.use-plugin
+```
+
+## Screenshots
+
+<img src=".github/screenshots/let-coding.png" width="80%">
+
+
+<table><tbody>
+<tr><td>Conversation with the image.</td><td>Conversation with the plugin.</td></tr>
+<tr><td><img src=".github/screenshots/conversation-with-image.png" width="90%"></td>
+<td><img src=".github/screenshots/conversation-with-plugin.png" width="90%"></td>
+</tr>
+<tr><td>Customize the Model Switcher.</td><td>App Settings.</td></tr>
+<tr><td><img src=".github/screenshots/model-switcher.png" width="90%"></td>
+<td><img src=".github/screenshots/settings.png" width="90%"></td>
+</tr>
+</tbody></table>
 
 ## Quick Overview
 
@@ -79,7 +91,7 @@ You can download the latest version of the automatically built image by using th
 ```bash
 docker pull soulteary/sparrow
 # or use the latest version
-docker pull soulteary/sparrow:v0.6.0
+docker pull soulteary/sparrow:v0.9.2
 ```
 
 Welcome to submit your code in the project to support your data type.
@@ -92,6 +104,12 @@ In configuration file [docker-compose.yml](./docker-compose.yml), you can find c
 
 
 For more advanced usage, and previous practices, such as searching various vertical websites through it, using MidJoruney to draw pictures, you can refer to the video in the [sparrow project documentation](https://github.com/soulteary/sparrow).
+
+## Performance
+
+The reason for the good experience of the project is because it is very fast and has a very good score.
+
+![](.github/screenshots/perf.png)
 
 ## About Private
 
