@@ -1,5 +1,9 @@
 # Docker ChatGPT
 
+<p style="text-align: center;">
+  <a href="README.md">ENGLISH</a> | <a href="README_CN.md"  target="_blank">中文文档</a>
+</p>
+
 ![](./.github/preview.jpg)
 
 One-click local version of ChatGPT, allowing access to various data sources and non-OpenAI models.
@@ -89,22 +93,21 @@ docker pull soulteary/sparrow
 docker pull soulteary/sparrow:v0.9.2
 ```
 
-Welcome to submit your code in the project to support your data type.
-
-## Customize
-
-As an early version, you can directly use it to access the OpenAI API and get the same front-end experience as the official one.
-
-In configuration file `docker-compose.yml`, you can find configuration information suitable for you.
+Then, restart the project with `docker compose down && docker compose up -d` to complete the upgrade.
 
 
 For more advanced usage, and previous practices, such as searching various vertical websites through it, using MidJoruney to draw pictures, you can refer to the video in the [Sparrow project](https://github.com/soulteary/sparrow) documentation.
+
+
+Welcome to submit your code in the project to support your data type.
 
 ## Performance
 
 The reason for the good experience of the project is because it is very fast and has a very good score.
 
 ![](.github/screenshots/perf.png)
+
+In addition, the daily operation of the program as a service only requires about 10MB of hard disk space, about 10MB of content, and about 1% of CPU resources.
 
 ## About Private
 
