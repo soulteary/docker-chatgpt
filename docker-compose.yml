@@ -3,7 +3,7 @@ version: '3'
 services:
 
   chatgpt-client:
-    image: soulteary/chatgpt:23.05.10
+    image: soulteary/chatgpt
     container_name: chat-client
     restart: always
     ports:
@@ -16,7 +16,7 @@ services:
       # the ChatGPT backend upstream, or connect a sparrow dev server `"http://host.docker.internal:8091"`
       APP_UPSTREAM: "http://sparrow:8091"
       # Enable i18n
-      ENABLE_I18N: true
+      ENABLE_I18N: false
 
   sparrow:
     image: soulteary/sparrow

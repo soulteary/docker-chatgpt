@@ -2,11 +2,25 @@
 
 One-click local version of ChatGPT, allowing access to various data sources and non-OpenAI models.
 
-<center>
-<img src=".github/screenshots/perf.png" width="50%">
-<p>keep the same as the official ChatGPT, but it is much FASTER :)</p>
-</center>
+## Screenshots
 
+<img src=".github/screenshots/let-coding.png" width="80%">
+
+Conversation with the image.
+
+<img src=".github/screenshots/conversation-with-image.png" width="80%">
+
+Conversation with the plugin.
+
+<img src=".github/screenshots/conversation-with-plugin.png" width="80%">
+
+Customize the Model Switcher.
+
+<img src=".github/screenshots/model-switcher.png" width="80%">
+
+App Settings.
+
+<img src=".github/screenshots/settings.png" width="80%">
 
 ## Key features
 
@@ -14,6 +28,8 @@ One-click local version of ChatGPT, allowing access to various data sources and 
 - Client is Blazing fast.
 - Allow you add any custom data source, data types.
 - Consistent with the official function interaction.
+
+<img src=".github/screenshots/perf.png" width="50%">
 
 ## Quick Overview
 
@@ -44,7 +60,7 @@ You can update the project by updating the mirror version used in this repositor
 
 ```bash
 # version in the docker-compose.yml file
-docker pull soulteary/chatgpt:23.05.10
+docker pull soulteary/chatgpt
 ```
 
 **Backend services will continue to complete and support new data source types.**
@@ -75,26 +91,6 @@ The project **does not need** to connect to **any external network** except for 
 You can prohibit the privacy leakage you are worried about by setting firewall rules or cloud server export access rules.
 
 This does not affect the use of the program as it does not require an additional network connection.
-
-## Screenshots
-
-![](.github/screenshots/let-coding.png)
-
-Conversation with the image.
-
-![](.github/screenshots/conversation-with-image.png)
-
-Conversation with the plugin.
-
-![](.github/screenshots/conversation-with-plugin.png)
-
-Customize the Model Switcher.
-
-![](.github/screenshots/model-switcher.png)
-
-App Settings.
-
-![](.github/screenshots/settings.png)
 
 ## Credits
 
