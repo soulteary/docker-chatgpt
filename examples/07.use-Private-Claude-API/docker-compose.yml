@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+
+  chatgpt-client:
+    image: soulteary/chatgpt
+    restart: always
+    ports:
+      - 8090:8090
+    environment:
+      # service port
+      APP_PORT: 8090
+      # the ChatGPT client domain, keep the same with chatgpt-client: `APP_HOSTNAME` option
+      APP_HOSTNAME: "http://localhost:8090"
+      # the ChatGPT backend upstream, or connect a sparrow dev server `"http://host.docker.internal:8091"`
+      APP_UPSTREAM: "http://sparrow:8091"
+
+  sparrow:
+    image: soulteary/sparrow
+    restart: always
+    environment:
+      # [Basic Settings]
+      # => The ChatGPT Web Client Domain
+      WEB_CLIENT_HOSTNAME: "http://localhost:8090"
+      # => Service port, default: 8091
+      # APP_PORT: 8091
+
+      # [Private Claude Server Settings] *optional
+      # => Enable Claude
+      ENABLE_CLAUDE: "on"
+      # => Enable Claude Only
+      # ENABLE_CLAUDE_ONLY: "on"
+      # => Claude API Key
+      CLAUDE_API_SECRET: "your-secret"
+      # => Claude API Address, eg: `"ws://...."`, or `"ws://host.docker.internal:8093/ws"`
+      CLAUDE_API_URL: "ws://localhost:8093/ws"
+
+    logging:
+        driver: "json-file"
+        options:
+            max-size: "10m"
