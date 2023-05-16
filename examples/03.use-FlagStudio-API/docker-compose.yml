@@ -31,7 +31,7 @@ services:
       # => Enable FlagStudio only
       ENABLE_FLAGSTUDIO_ONLY: "off"
       # => FlagStudio API Key
-      # FLAGSTUDIO_API_KEY: "your-flagstudio-api-key"
+      # FLAGSTUDIO_API_KEY: "your-flagstudio-api-key", like: `238dc972f6a2ebf15d787aef659cc4d1`
       FLAGSTUDIO_API_KEY: "238dc972f6a2ebf15d787aef659cc4d1"
 
     logging:
