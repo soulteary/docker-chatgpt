@@ -81,6 +81,8 @@ You can update the project by updating the mirror version used in this repositor
 ```bash
 # version in the docker-compose.yml file
 docker pull soulteary/chatgpt
+# Mac M1/M2
+docker pull soulteary/docker-chatgpt:arm64
 ```
 
 **Backend services will continue to complete and support new data source types.**

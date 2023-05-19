@@ -82,6 +82,8 @@ docker compose up -d
 
 ```bash
 docker pull soulteary/chatgpt
+# Mac M1/M2
+docker pull soulteary/docker-chatgpt:arm64
 ```
 
 **后端项目将持续更新和完善，用来添加各种各样的新的数据源，尤其是 OpenAI 不会支持的，但确是十分有用的。**
