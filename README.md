@@ -79,7 +79,7 @@ Open your browser, visit `http://localhost:8090`, and enjoy.
 You can update the project by updating the mirror version used in this repository.
 
 ```bash
-# version in the docker-compose.yml file
+# x86_64
 docker pull soulteary/chatgpt
 # Mac M1/M2
 docker pull soulteary/docker-chatgpt:arm64

@@ -81,6 +81,7 @@ docker compose up -d
 你可以使用下面的命令，来下载到最新版本的 Docker 镜像，来确保和项目是一致的：
 
 ```bash
+# x86_64
 docker pull soulteary/chatgpt
 # Mac M1/M2
 docker pull soulteary/docker-chatgpt:arm64
